@@ -64,8 +64,7 @@ def scrape():
 
     #### Scrape Mars facts table and export it to a html table using pandas.
     mars_facts_df = pd.read_html('https://space-facts.com/mars/')
-    mars_facts_df[0].to_html('mars_facts.html', header=False)
-
+    mars_facts = str(mars_facts_df[0].to_html(index=False, header=False, border="0"))
 
 
     #### Scrape the USGS Astrogeology website for Martian Hemisphere images and
@@ -98,7 +97,7 @@ def scrape():
         tempx = soupx.findAll("div", class_="content")    
         hemisphere_image_urls.append({
                 "title" : str(tempx).split('"title">')[1].split(' Enhanced<')[0],
-                "img_url" : str(tempx).split('Filename</dt><dd><a href="')[1].split('">')[0]
+                "img_url" : str(tempx).split('Filename</dt><dd><a href="')[1].split('">')[0] + "/full.jpeg"
             })
         browser.quit()
     scrape_mars_dict = {
@@ -107,6 +106,7 @@ def scrape():
         "news_title" : news_title,
         "news_p" : news_p,
         "mars_weather" : mars_weather,
-        "hemisphere_image_urls" : hemisphere_image_urls
+        "hemisphere_image_urls" : hemisphere_image_urls,
+        "mars_facts_html" : mars_facts
     }
     return(scrape_mars_dict)
