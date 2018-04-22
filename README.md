@@ -5,7 +5,8 @@ The goal of this project was to create a tool that pulled relevant information f
 
 For a picture of the final result, please navigate to the bottom of this README. 
 
-### 
+### Known Issues:
+* Should open multiple browsers in parallel rather than in sequence for faster execution of web scraping. 
 
 ### Libraries: 
 Pandas, Splinter, BeautifulSoup, Flask, MongoDB, Bootstrap.
