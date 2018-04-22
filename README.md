@@ -1,7 +1,8 @@
 # Scraping Websites
-The goal of this project was to create a tool that pulled relevant information from multiple web pages and transformed it into a single responsive mobile ready website.
 
-### [Click Here for a video of the scraper in action (Youtube)](https://youtu.be/HHEvZdiXZUw)
+# [Demonstration Video (Youtube)](https://youtu.be/HHEvZdiXZUw)
+
+The goal of this project was to create a tool that pulled relevant information from multiple web pages and transformed it into a single responsive mobile ready website.
 
 For a picture of the final result, please navigate to the bottom of this README. 
 
